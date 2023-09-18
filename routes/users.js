@@ -7,13 +7,16 @@ const generateId = () => {
     return randomId.slice(2, 11);
   };
 
-// generate JS DOC for me.
 
 /**
  * @swagger
- * /new:
+ * tags:
+ *   name: Users
+ *   description: Users management
+ * /api/users/new:
  *   post:
- *     summary: Create a new user
+ *     summary: Create a new 
+ *     tags: [Users]
  *     requestBody:
  *       required: true
  *       content:
@@ -54,6 +57,7 @@ const generateId = () => {
  *               properties:
  *                 error:
  *                   type: string
+ * 
  */
 router.post("/new", async(req, res, next) => {
     const { name, age } = req?.body
@@ -76,9 +80,13 @@ router.post("/new", async(req, res, next) => {
 
 /**
  * @swagger
- * /data/{id}:
+ * tags:
+ *   name: Users
+ *   description: Users management
+ * /api/users/data/:id:
  *   get:
  *     summary: Get user data by ID
+ *     tags: [Users]
  *     parameters:
  *       - in: path
  *         name: id

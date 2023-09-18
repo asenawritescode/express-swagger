@@ -14,6 +14,11 @@ const options = {
       title: 'Demo API User Store',
       version: '1.1.2',
     },
+    servers : [
+        {
+            url: 'http://localhost:5000'
+        }
+    ], 
   },
   apis: ['./routes/users.js'], // files containing annotations as above
 };
